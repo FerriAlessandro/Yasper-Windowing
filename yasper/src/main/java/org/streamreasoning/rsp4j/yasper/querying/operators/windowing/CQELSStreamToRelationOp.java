@@ -55,7 +55,7 @@ public class CQELSStreamToRelationOp<T1, T2> extends ObservableStreamToRelationO
     @Override
     public Content<T1, T2> content(long t_e) {
         Optional<Window> max = windows.keySet().stream()
-                .filter(w -> w.getO() < t_e && w.getC() <= t_e)
+                .filter(w -> w.getO() < t_e && w.getC() >= t_e)
                 .max(Comparator.comparingLong(Window::getC));
 
         if (max.isPresent())
