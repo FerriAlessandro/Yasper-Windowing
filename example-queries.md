@@ -1,4 +1,4 @@
-# RSP-QL Example Queries
+# RSP-QL org.streamreasoning.rsp4j.yasper.example_windowing.Example Queries
 
 ## Background data
 
