@@ -48,7 +48,7 @@ public class CSPARQLStreamToRelationOp<I, W> extends ObservableStreamToRelationO
     @Override
     public Content<I, W> content(long t_e) {
         Optional<Window> max = active_windows.keySet().stream()
-                .filter(w -> w.getO() < t_e && w.getC() >= t_e)
+                .filter(w -> w.getO() < t_e && w.getC() < t_e)
                 .max(Comparator.comparingLong(Window::getC));
 
         if (max.isPresent())
